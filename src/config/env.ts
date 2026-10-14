@@ -9,7 +9,7 @@ const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
   PORT: z.string().transform(Number).default('5000'),
   CLIENT_URL: z.string().default('http://localhost:3000'),
-  MONGODB_URI: z.string().default('mongodb://localhost:27017/chat_system'),
+  MONGODB_URI: z.string().default('mongodb://127.0.0.1:27017/chat_system'),
   JWT_SECRET: z.string().min(16).default('chat_system_jwt_super_secret_dev_key_2025_secure_tokens'),
   JWT_EXPIRES_IN: z.string().default('7d'),
   CLOUDINARY_CLOUD_NAME: z.string().optional().default('demo_cloud'),
